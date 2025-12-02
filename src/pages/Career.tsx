@@ -31,17 +31,18 @@ const Career = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    currentRole: "",
-    applyFor: "",
-    experience: "",
-    dob: "",
-    gender: "",
-    message: "",
-    termsAccepted: false,
-  });
+  fullName: "",
+  email: "",
+  phone: "",
+  currentRole: "",
+  applyFor: "",
+  experience: "",
+  dob: "",
+  gender: "",
+  message: "",
+  resume: null as File | null,
+  termsAccepted: false,
+});
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,17 +61,18 @@ const Career = () => {
       description: "We'll review your application and get back to you soon.",
     });
     setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      currentRole: "",
-      applyFor: "",
-      experience: "",
-      dob: "",
-      gender: "",
-      message: "",
-      termsAccepted: false,
-    });
+  fullName: "",
+  email: "",
+  phone: "",
+  currentRole: "",
+  applyFor: "",
+  experience: "",
+  dob: "",
+  gender: "",
+  message: "",
+  resume: null,
+  termsAccepted: false,
+});
     setIsSubmitting(false);
   };
 
@@ -124,155 +126,173 @@ const Career = () => {
 
         {/* Application Form */}
         <section className="section-padding bg-background">
-          <div className="container-custom px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-12">
-                <span className="inline-block px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium mb-4">
-                  Apply Now
-                </span>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-                  Submit Your <span className="text-secondary">Application</span>
-                </h2>
-              </div>
+  <div className="container-custom px-4">
+    <div className="max-w-3xl mx-auto">
+      <div className="text-center mb-12">
+        <span className="inline-block px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium mb-4">
+          Apply Now
+        </span>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+          Submit Your <span className="text-secondary">Application</span>
+        </h2>
+      </div>
 
-              <form onSubmit={handleSubmit} className="bg-muted rounded-2xl p-6 md:p-8 shadow-custom space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
-                    <Input
-                      required
-                      value={formData.fullName}
-                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      placeholder="Your Full Name"
-                      className="bg-background"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
-                    <Input
-                      required
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="your@email.com"
-                      className="bg-background"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Phone *</label>
-                    <Input
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+91 XXXXX XXXXX"
-                      className="bg-background"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Current Role</label>
-                    <Input
-                      value={formData.currentRole}
-                      onChange={(e) => setFormData({ ...formData, currentRole: e.target.value })}
-                      placeholder="Your Current Position"
-                      className="bg-background"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Apply For *</label>
-                    <select
-                      required
-                      value={formData.applyFor}
-                      onChange={(e) => setFormData({ ...formData, applyFor: e.target.value })}
-                      className="w-full h-10 px-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                    >
-                      <option value="">Select Position</option>
-                      {positions.map((pos) => (
-                        <option key={pos} value={pos}>{pos}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Years of Experience</label>
-                    <Input
-                      value={formData.experience}
-                      onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
-                      placeholder="e.g., 5 years"
-                      className="bg-background"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Date of Birth</label>
-                    <Input
-                      type="date"
-                      value={formData.dob}
-                      onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
-                      className="bg-background"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Gender</label>
-                    <select
-                      value={formData.gender}
-                      onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                      className="w-full h-10 px-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                    >
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Cover Letter / Message</label>
-                  <Textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about yourself and why you want to join us..."
-                    rows={4}
-                    className="bg-background resize-none"
-                  />
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    checked={formData.termsAccepted}
-                    onChange={(e) => setFormData({ ...formData, termsAccepted: e.target.checked })}
-                    className="mt-1"
-                  />
-                  <label htmlFor="terms" className="text-sm text-muted-foreground">
-                    I accept the terms and conditions and agree that my data will be processed for recruitment purposes.
-                  </label>
-                </div>
-
-                <Button type="submit" variant="default" size="xl" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <>
-                      <span className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-                      Submitting...
-                    </>
-                  ) : (
-                    <>
-                      Submit Application <Send className="w-5 h-5 ml-2" />
-                    </>
-                  )}
-                </Button>
-              </form>
-            </div>
+      <form onSubmit={handleSubmit} className="bg-muted rounded-2xl p-6 md:p-8 shadow-custom space-y-6">
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
+            <Input
+              required
+              value={formData.fullName}
+              onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+              placeholder="Your Full Name"
+              className="bg-background"
+            />
           </div>
-        </section>
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
+            <Input
+              required
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              placeholder="your@email.com"
+              className="bg-background"
+            />
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Phone *</label>
+            <Input
+              required
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              placeholder="+91 XXXXX XXXXX"
+              className="bg-background"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Current Role</label>
+            <Input
+              value={formData.currentRole}
+              onChange={(e) => setFormData({ ...formData, currentRole: e.target.value })}
+              placeholder="Your Current Position"
+              className="bg-background"
+            />
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Apply For *</label>
+            <select
+              required
+              value={formData.applyFor}
+              onChange={(e) => setFormData({ ...formData, applyFor: e.target.value })}
+              className="w-full h-10 px-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Select Position</option>
+              {positions.map((pos) => (
+                <option key={pos} value={pos}>{pos}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Years of Experience</label>
+            <Input
+              value={formData.experience}
+              onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
+              placeholder="e.g., 5 years"
+              className="bg-background"
+            />
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Date of Birth</label>
+            <Input
+              type="date"
+              value={formData.dob}
+              onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
+              className="bg-background"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-foreground mb-2">Gender</label>
+            <select
+              value={formData.gender}
+              onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
+              className="w-full h-10 px-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-foreground mb-2">Resume (PDF) *</label>
+          <div className="relative">
+            <input
+              type="file"
+              accept=".pdf"
+              required
+              onChange={(e) => setFormData({ ...formData, resume: e.target.files?.[0] || null })}
+              className="w-full h-10 px-3 py-2 rounded-md border border-input bg-background text-foreground file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-secondary file:text-secondary-foreground hover:file:bg-secondary/90 cursor-pointer"
+            />
+          </div>
+          {formData.resume && (
+            <p className="text-xs text-muted-foreground mt-2">
+              Selected: {formData.resume.name}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-foreground mb-2">Cover Letter / Message</label>
+          <Textarea
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            placeholder="Tell us about yourself and why you want to join us..."
+            rows={4}
+            className="bg-background resize-none"
+          />
+        </div>
+
+        <div className="flex items-start gap-3">
+          <input
+            type="checkbox"
+            id="terms"
+            checked={formData.termsAccepted}
+            onChange={(e) => setFormData({ ...formData, termsAccepted: e.target.checked })}
+            className="mt-1"
+          />
+          <label htmlFor="terms" className="text-sm text-muted-foreground">
+            I accept the terms and conditions and agree that my data will be processed for recruitment purposes.
+          </label>
+        </div>
+
+        <Button type="submit" variant="default" size="xl" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? (
+            <>
+              <span className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
+              Submitting...
+            </>
+          ) : (
+            <>
+              Submit Application <Send className="w-5 h-5 ml-2" />
+            </>
+          )}
+        </Button>
+      </form>
+    </div>
+  </div>
+</section>
       </main>
       <Footer />
     </div>

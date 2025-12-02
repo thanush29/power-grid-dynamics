@@ -23,22 +23,23 @@ const services = [
 
 const offices = [
   {
-    title: "Tamil Nadu Office (Head Office)",
-    address: "No. 123, Industrial Area, Coimbatore, Tamil Nadu - 641001, India",
-    phone: "+91 98406 50939",
+    title: "Head Office",
+    address: "No:5/107-D1, Meenakshi Nagar, 4th Street, A.Salaipudur, Kovilpatti, Tamil Nadu - 628502, India",
+    phone: "+91 94421 52528",
+    landline: "04632-242528",
     email: "info@masstechnopower.com",
   },
   {
-    title: "Chennai Office",
-    address: "No. 456, Anna Salai, Chennai, Tamil Nadu - 600002, India",
-    phone: "+91 98406 50940",
-    email: "chennai@masstechnopower.com",
+    title: "Chennai Branch Office",
+    address: "Old No.45, New No. 95, Ground Floor, Poes Main Road, Teynampet, Chennai - 600 018, India",
+    phone: "+91 99620 56262",
+    email: "info@masstechnopower.com",
   },
   {
     title: "Saudi Arabia Office",
-    address: "King Fahd Road, Al Olaya District, Riyadh 12212, Saudi Arabia",
-    phone: "+966 11 XXX XXXX",
-    email: "saudi@masstechnopower.com",
+    address: "Venus Energy, Noor Plaza (3rd Floor), 2770 Custodian of Two Holy Mosques Rd, Al Khobar - 34448, Saudi Arabia",
+    phone: "+966 500164045",
+    email: "info@masstechnopower.com",
   },
 ];
 
@@ -100,13 +101,13 @@ const Contact = () => {
                 <div className="bg-background rounded-2xl p-6 shadow-custom">
                   <h3 className="font-heading text-xl font-bold text-foreground mb-6">Get in Touch</h3>
                   <div className="space-y-4">
-                    <a href="tel:+919840650939" className="flex items-start gap-4 p-3 rounded-lg hover:bg-muted transition-colors">
+                    <a href="tel:04632-242528" className="flex items-start gap-4 p-3 rounded-lg hover:bg-muted transition-colors">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Phone className="w-5 h-5 text-primary" />
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Call Us</p>
-                        <p className="font-semibold text-foreground">+91 98406 50939</p>
+                        <p className="font-semibold text-foreground">04632-242528</p>
                       </div>
                     </a>
                     <a href="mailto:info@masstechnopower.com" className="flex items-start gap-4 p-3 rounded-lg hover:bg-muted transition-colors">
@@ -228,9 +229,9 @@ const Contact = () => {
                 {/* Maps */}
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                   <div className="bg-background rounded-2xl p-4 shadow-custom">
-                    <h4 className="font-semibold text-foreground mb-4">Tamil Nadu Office</h4>
+                    <h4 className="font-semibold text-foreground mb-4">Kovilpatti Head Office</h4>
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250758.72949128565!2d76.78626815!3d11.01183365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3938.9092942845846!2d77.84529751109164!3d9.162655090866188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06b3993a3f6e67%3A0x76c5001d524bff58!2sAyyappan%20%26%20Co!5e0!3m2!1sen!2sin!4v1764667423536!5m2!1sen!2sin"
                       width="100%"
                       height="200"
                       style={{ border: 0, borderRadius: "0.5rem" }}
@@ -242,7 +243,7 @@ const Contact = () => {
                   <div className="bg-background rounded-2xl p-4 shadow-custom">
                     <h4 className="font-semibold text-foreground mb-4">Chennai Office</h4>
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d80.06892565!3d13.04770035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.918370024644!2d80.24768671114234!3d13.040867787227862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526700742fb955%3A0xe95d30601d229b5a!2sAyyappan%20%26%20Co%20Chennai%20Headquarters!5e0!3m2!1sen!2sin!4v1764667500119!5m2!1sen!2sin"
                       width="100%"
                       height="200"
                       style={{ border: 0, borderRadius: "0.5rem" }}

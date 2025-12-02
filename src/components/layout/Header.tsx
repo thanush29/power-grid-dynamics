@@ -35,33 +35,45 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top Bar */}
       <div className="bg-foreground text-background py-2 px-4">
-        <div className="container-custom flex flex-wrap justify-between items-center text-xs md:text-sm gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
-            <a href="mailto:info@masstechnopower.com" className="flex items-center gap-1 hover:text-primary transition-colors">
-              <Mail className="w-3 h-3 md:w-4 md:h-4" />
-              <span className="hidden sm:inline">info@masstechnopower.com</span>
-            </a>
-            <a href="tel:+919840650939" className="flex items-center gap-1 hover:text-primary transition-colors">
-              <Phone className="w-3 h-3 md:w-4 md:h-4" />
-              <span>+91 98406 50939</span>
-            </a>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4 text-muted-foreground">
-            <span className="flex items-center gap-1">
-              <MapPin className="w-3 h-3" />
-              <span className="hidden md:inline">Tamil Nadu</span>
-            </span>
-            <span className="hidden lg:flex items-center gap-1">
-              <MapPin className="w-3 h-3" />
-              Chennai
-            </span>
-            <span className="hidden lg:flex items-center gap-1">
-              <MapPin className="w-3 h-3" />
-              Saudi Arabia
-            </span>
-          </div>
-        </div>
-      </div>
+  <div className="container-custom flex flex-wrap justify-between items-center text-xs md:text-sm gap-2">
+    <div className="flex items-center gap-4 flex-wrap">
+      <a href="mailto:info@masstechnopower.com" className="flex items-center gap-1 hover:text-primary transition-colors">
+        <Mail className="w-3 h-3 md:w-4 md:h-4" />
+        <span className="hidden sm:inline">info@masstechnopower.com</span>
+      </a>
+      <a href="tel:04632-242528" className="flex items-center gap-1 hover:text-primary transition-colors">
+        <Phone className="w-3 h-3 md:w-4 md:h-4" />
+        <span>04632-242528</span>
+      </a>
+    </div>
+    <div className="flex items-center gap-2 md:gap-4 text-muted-foreground">
+      <a href="https://maps.app.goo.gl/Dgu4uTPNZU1gV7KP8" className="hidden lg:flex items-center gap-1 hover:text-primary transition-colors">
+        <MapPin className="w-3 h-3" />
+        Kovilpatti, TN
+      </a>
+      <a href="tel:+91 9442152528" className="flex items-center gap-1 hover:text-primary transition-colors">
+        <Phone className="w-3 h-3 md:w-4 md:h-4" />
+        <span>+91 9442152528</span>
+      </a>
+      <a href="https://maps.app.goo.gl/kdhwxY1FL41xgDRq8" className="hidden lg:flex items-center gap-1 hover:text-primary transition-colors">
+        <MapPin className="w-3 h-3" />
+        Chennai
+      </a>
+      <a href="tel:+91 9962056262" className="flex items-center gap-1 hover:text-primary transition-colors">
+        <Phone className="w-3 h-3 md:w-4 md:h-4" />
+        <span>+91 9962056262</span>
+      </a>
+      <a href="https://maps.app.goo.gl/zsaKR2oU4UWcZMjT9" className="hidden lg:flex items-center gap-1 hover:text-primary transition-colors">
+        <MapPin className="w-3 h-3" />
+        Al Khobar, KSA
+      </a>
+      <a href="tel:+966 500164045" className="flex items-center gap-1 hover:text-primary transition-colors">
+        <Phone className="w-3 h-3 md:w-4 md:h-4" />
+        <span>+966 500164045</span>
+      </a>
+    </div>
+  </div>
+</div>
 
       {/* Main Navigation */}
       <nav
@@ -76,16 +88,11 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 md:gap-3">
             <div className="relative">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-red-gradient flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-lg md:text-xl">M</span>
-              </div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 md:w-5 md:h-5 rounded-full bg-secondary flex items-center justify-center">
-                <span className="text-secondary-foreground text-[8px] md:text-[10px] font-bold">⚡</span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-base md:text-xl font-bold text-primary leading-tight">MASS Techno Power</span>
-              <span className="text-[10px] md:text-xs text-muted-foreground">Ayyappan & Co</span>
+              <img 
+                src="/MASS_bg.png" 
+                alt="MASS Techno Power" 
+                className="h-10 md:h-12 w-auto object-contain"
+              />
             </div>
           </Link>
 

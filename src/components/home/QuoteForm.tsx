@@ -83,7 +83,7 @@ export function QuoteForm() {
             {/* Contact Info */}
             <div className="space-y-6">
               <a
-                href="tel:+919840650939"
+                href="tel:+91 9442152528"
                 className="flex items-center gap-4 p-4 bg-muted rounded-xl hover:bg-primary/10 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform">
@@ -91,7 +91,7 @@ export function QuoteForm() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Call Us</p>
-                  <p className="font-semibold text-foreground">+91 98406 50939</p>
+                  <p className="font-semibold text-foreground">+91 9442152528</p>
                 </div>
               </a>
               <a

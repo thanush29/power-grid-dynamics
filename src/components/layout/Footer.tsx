@@ -38,7 +38,7 @@ export function Footer() {
                 Contact Us <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:+919840650939">
+            <a href="tel:+91 9442152528">
               <Button variant="hero" className="w-full sm:w-auto bg-secondary hover:bg-secondary/90">
                 <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" /> Call Now
               </Button>
@@ -54,14 +54,12 @@ export function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-red-gradient flex items-center justify-center">
-                  <span className="text-primary-foreground font-heading font-bold text-xl">M</span>
-                </div>
-                <div>
-                  <span className="font-heading text-lg font-bold text-primary-foreground block">MASS Techno Power</span>
-                  <span className="text-xs text-muted-foreground">Ayyappan & Co</span>
-                </div>
-              </div>
+  <img 
+    src="/MASS.png" 
+    alt="MASS Techno Power" 
+    className="h-14 md:h-16 lg:h-20 w-auto object-contain"
+  />
+</div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                 Certified Class I contractor executing Electrical, Civil, Substations & Transmission Line Works since 1990. Excellence in power infrastructure solutions.
               </p>
@@ -119,11 +117,11 @@ export function Footer() {
               <h3 className="font-heading text-lg font-bold text-primary-foreground mb-6">Contact Us</h3>
               <div className="space-y-4">
                 <a
-                  href="tel:+919840650939"
+                  href="04632-242528"
                   className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
-                  <span>+91 98406 50939</span>
+                  <span>04632-242528</span>
                 </a>
                 <a
                   href="mailto:info@masstechnopower.com"
@@ -135,22 +133,22 @@ export function Footer() {
                 <div className="flex items-start gap-3 text-muted-foreground text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
                   <div>
-                    <p className="font-medium text-primary-foreground">Tamil Nadu Office</p>
-                    <p>123 Main Street, Coimbatore, Tamil Nadu - 641001</p>
+                    <p className="font-medium text-primary-foreground">Head Office</p>
+                    <p>No:5/107-D1, Meenakshi Nagar, 4th Street, A.Salaipudur, Kovilpatti, Tamil Nadu - 628502, India</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-muted-foreground text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-secondary" />
                   <div>
                     <p className="font-medium text-primary-foreground">Chennai Office</p>
-                    <p>456 Anna Salai, Chennai, Tamil Nadu - 600002</p>
+                    <p>Old No.45, New No. 95, Ground Floor, Poes Main Road, Teynampet, Chennai - 600 018, India</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-muted-foreground text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
                   <div>
                     <p className="font-medium text-primary-foreground">Saudi Arabia Office</p>
-                    <p>King Fahd Road, Riyadh, Saudi Arabia</p>
+                    <p>Venus Energy, Noor Plaza (3rd Floor), 2770 Custodian of Two Holy Mosques Rd, Al Khobar - 34448, Saudi Arabia</p>
                   </div>
                 </div>
               </div>
