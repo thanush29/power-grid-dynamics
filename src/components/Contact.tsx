@@ -305,25 +305,26 @@ const contactInfo = [
         <div className="p-4 text-center bg-[#03045e]">
           <h3 className="text-lg font-semibold text-white">Our Location</h3>
         </div>
-       <div className='flex items-center justify-center gap-4'>
+       <div className='flex flex-col lg:flex-row items-center justify-center gap-4'>
          <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.918369823956!2d80.250267!3d13.0408678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526700742fb955%3A0xe95d30601d229b5a!2sAyyappan%20%26%20Co%20Chennai%20Headquarters!5e0!3m2!1sen!2sin!4v1765518319754!5m2!1sen!2sin"
           width="100%"
-          height="400"
+          height="300"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="w-full"
-        />      <iframe
+          className="w-full lg:h-[400px]"
+        />
+        <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15755.398035224958!2d77.8484443088864!3d9.16804513805875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06b3993a3f6e67%3A0x76c5001d524bff58!2sAyyappan%20%26%20Co!5e0!3m2!1sen!2sin!4v1765546615932!5m2!1sen!2sin"
           width="100%"
-          height="400"
+          height="300"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="w-full"
+          className="w-full lg:h-[400px]"
         />
        </div>
         </Card>

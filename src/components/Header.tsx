@@ -36,18 +36,17 @@ export function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white/70 shadow-sm border-b border-[#BFDBFE]' : 'bg-white backdrop-blur-sm'
+          isScrolled ? 'bg-white/95 shadow-sm border-b border-[#BFDBFE]' : 'bg-white backdrop-blur-sm'
         }`}
       >
-        <div className="px-4 mx-auto max-w-[1440px] sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 bg-white lg:h-32">
-            <div className="flex items-center gap-4">
+        <div className="px-3 sm:px-4 mx-auto max-w-[1440px] lg:px-8">
+          <div className="flex items-center justify-between h-14 sm:h-16 bg-white lg:h-32">
+            <div className="flex items-center gap-2 sm:gap-4">
               <div className='flex flex-col items-center justify-center'>
-                
                 <img
   src={Logo}
   alt="Logo"
-  className="w-auto h-20 sm:h-24 lg:h-28 object-contain"
+  className="w-auto h-12 sm:h-16 md:h-20 lg:h-28 object-contain"
 />
 
               </div>
@@ -93,22 +92,22 @@ export function Header() {
 
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 duration-300 bg-white/70 lg:hidden animate-in slide-in-from-right"
-          style={{ top: '64px' }}
+          className="fixed inset-0 z-40 duration-300 bg-white/95 lg:hidden animate-in slide-in-from-right"
+          style={{ top: '56px' }}
         >
-          <nav className="flex flex-col gap-1 p-4">
+          <nav className="flex flex-col gap-1 p-3 sm:p-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left py-3 px-4 text-base font-medium text-[#154D71] hover:bg-[#E0F2FE] rounded-lg transition-colors"
+                className="text-left py-2.5 sm:py-3 px-3 sm:px-4 text-sm sm:text-base font-medium text-[#154D71] hover:bg-[#E0F2FE] rounded-lg transition-colors"
               >
                 {item.label}
               </button>
             ))}
-            <div className="mt-4 pt-4 border-t border-[#BFDBFE]">
+            <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-[#BFDBFE]">
               <Button
-                className="w-full bg-[#06d6a0] hover:bg-[#06d6a0] text-white font-semibold"
+                className="w-full bg-[#06d6a0] hover:bg-[#06d6a0] text-white font-semibold text-sm sm:text-base"
                 onClick={() => scrollToSection('contact')}
               >
                 Get Quote

@@ -137,19 +137,21 @@ export function Services() {
     return (
       <div ref={cardRef}>
         <Card className={`relative overflow-hidden p-0 h-full hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 ${service.color} group`}>
-          <div className="absolute top-0 right-0 w-32 h-32 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 -translate-x-1/2 translate-y-1/2 rounded-full bg-white/5"></div>
-          <div className="relative z-10 p-6">
-            <div className="flex items-center justify-center w-16 h-16 mb-4 transition-transform duration-300 rounded-xl bg-white/15 group-hover:scale-110">
-              <service.icon size={32} className="text-white" weight="duotone" />
+          <div className="absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5"></div>
+          <div className="absolute bottom-0 left-0 w-20 sm:w-24 h-20 sm:h-24 -translate-x-1/2 translate-y-1/2 rounded-full bg-white/5"></div>
+          <div className="relative z-10 p-4 sm:p-5 lg:p-6">
+            <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-3 sm:mb-4 transition-transform duration-300 rounded-xl bg-white/15 group-hover:scale-110">
+              <service.icon size={24} className="text-white sm:hidden" weight="duotone" />
+              <service.icon size={28} className="hidden text-white sm:block lg:hidden" weight="duotone" />
+              <service.icon size={32} className="hidden text-white lg:block" weight="duotone" />
             </div>
-            <h3 className="mb-3 text-xl font-bold text-white">{service.title}</h3>
-            <p className="mb-4 text-base leading-relaxed text-white/85">{service.description}</p>
-            <div className="pt-4 space-y-2 border-t border-white/20">
+            <h3 className="mb-2 sm:mb-3 text-base sm:text-lg lg:text-xl font-bold text-white">{service.title}</h3>
+            <p className="mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed text-white/85">{service.description}</p>
+            <div className="pt-3 sm:pt-4 space-y-1.5 sm:space-y-2 border-t border-white/20">
               {service.features.map((feature) => (
                 <div key={feature} className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-white/80"></div>
-                  <span className="text-sm text-white/85">{feature}</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-white/80 flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm text-white/85">{feature}</span>
                 </div>
               ))}
             </div>
@@ -190,52 +192,52 @@ export function Services() {
           ))}
         </div>
 
-        <div ref={bottomCardsRef} className="grid gap-8 md:grid-cols-2">
-          <Card className="p-10 bg-white/70 border border-[#E2E8F0] hover:shadow-lg transition-all">
-            <h3 className="text-2xl font-bold mb-6 text-[#03045e]">Why Choose Ayappan & Co?</h3>
-            <ul className="space-y-5">
-              <li className="flex items-start gap-4">
-                <div className="w-7 h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-base font-bold text-white">✓</span>
+        <div ref={bottomCardsRef} className="grid gap-4 sm:gap-6 lg:gap-8 md:grid-cols-2">
+          <Card className="p-5 sm:p-6 lg:p-10 bg-white/70 border border-[#E2E8F0] hover:shadow-lg transition-all">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-5 lg:mb-6 text-[#03045e]">Why Choose Ayappan & Co?</h3>
+            <ul className="space-y-3 sm:space-y-4 lg:space-y-5">
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-sm sm:text-base font-bold text-white">✓</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-[#03045e] text-lg">TNEB Class I Certified</div>
-                  <div className="text-base text-[#64748B]">State Power Utility certified contractor for EHV works</div>
+                  <div className="font-semibold text-[#03045e] text-sm sm:text-base lg:text-lg">TNEB Class I Certified</div>
+                  <div className="text-xs sm:text-sm lg:text-base text-[#64748B]">State Power Utility certified contractor for EHV works</div>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-7 h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-base font-bold text-white">✓</span>
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-sm sm:text-base font-bold text-white">✓</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-[#03045e] text-lg">ESA Grade License Holder</div>
-                  <div className="text-base text-[#64748B]">ESA:530 license by Electrical Licensing Board of Tamil Nadu</div>
+                  <div className="font-semibold text-[#03045e] text-sm sm:text-base lg:text-lg">ESA Grade License Holder</div>
+                  <div className="text-xs sm:text-sm lg:text-base text-[#64748B]">ESA:530 license by Electrical Licensing Board of Tamil Nadu</div>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-7 h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-base font-bold text-white">✓</span>
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-sm sm:text-base font-bold text-white">✓</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-[#03045e] text-lg">300+ Skilled Professionals</div>
-                  <div className="text-base text-[#64748B]">Dedicated in-house team for all project aspects</div>
+                  <div className="font-semibold text-[#03045e] text-sm sm:text-base lg:text-lg">300+ Skilled Professionals</div>
+                  <div className="text-xs sm:text-sm lg:text-base text-[#64748B]">Dedicated in-house team for all project aspects</div>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-7 h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-base font-bold text-white">✓</span>
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#03045e] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-sm sm:text-base font-bold text-white">✓</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-[#03045e] text-lg">Strong Supplier Network</div>
-                  <div className="text-base text-[#64748B]">Ensuring timely material supply and cost efficiency</div>
+                  <div className="font-semibold text-[#03045e] text-sm sm:text-base lg:text-lg">Strong Supplier Network</div>
+                  <div className="text-xs sm:text-sm lg:text-base text-[#64748B]">Ensuring timely material supply and cost efficiency</div>
                 </div>
               </li>
             </ul>
           </Card>
 
-          <Card className="p-10 bg-white/70 border border-[#E2E8F0] hover:shadow-lg transition-all">
-            <h3 className="text-2xl font-bold mb-6 text-[#03045e]">Sectors We Serve</h3>
-            <div className="grid grid-cols-2 gap-5">
+          <Card className="p-5 sm:p-6 lg:p-10 bg-white/70 border border-[#E2E8F0] hover:shadow-lg transition-all">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-5 lg:mb-6 text-[#03045e]">Sectors We Serve</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
               {[
                 'Power Utilities',
                 'Independent Power Producers',
@@ -246,9 +248,9 @@ export function Services() {
                 'Distribution Networks',
                 'Transmission Infrastructure',
               ].map((sector) => (
-                <div key={sector} className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#03045e]"></div>
-                  <span className="text-lg text-[#03045e]">{sector}</span>
+                <div key={sector} className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#03045e] flex-shrink-0"></div>
+                  <span className="text-sm sm:text-base lg:text-lg text-[#03045e]">{sector}</span>
                 </div>
               ))}
             </div>

@@ -26,10 +26,10 @@ export function Swiper() {
   ];
 
   return (
-    <section className="py-16 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+    <section className="py-10 sm:py-12 lg:py-16 overflow-hidden bg-gradient-to-b from-white to-gray-50">
       <div className="px-4 mx-auto max-w-[1440px] sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
+        <div className="mb-8 sm:mb-10 lg:mb-12 text-center">
         
 
              <span className="inline-block px-5 py-2 bg-[#03045e] text-white font-semibold rounded-full text-sm mb-6">
@@ -55,7 +55,7 @@ export function Swiper() {
             {partners.map((partner, idx) => (
               <div
                 key={`first-${idx}`}
-                className="flex-shrink-0 w-[200px] h-[120px] mx-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center p-6 group"
+                className="flex-shrink-0 w-[140px] sm:w-[180px] lg:w-[200px] h-[90px] sm:h-[110px] lg:h-[120px] mx-3 sm:mx-4 lg:mx-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center p-4 sm:p-5 lg:p-6 group"
               >
                 <img
                   src={partner.logo}
@@ -65,7 +65,7 @@ export function Swiper() {
                     const target = e.target as HTMLImageElement;
                     target.style.display = "none";
                     if (target.parentElement) {
-                      target.parentElement.innerHTML = `<div class="text-[#0A1F44] font-bold text-lg text-center">${partner.name}</div>`;
+                      target.parentElement.innerHTML = `<div class="text-[#0A1F44] font-bold text-sm sm:text-base lg:text-lg text-center">${partner.name}</div>`;
                     }
                   }}
                 />
@@ -75,7 +75,7 @@ export function Swiper() {
             {partners.map((partner, idx) => (
               <div
                 key={`second-${idx}`}
-                className="flex-shrink-0 w-[200px] h-[120px] mx-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center p-6 group"
+                className="flex-shrink-0 w-[140px] sm:w-[180px] lg:w-[200px] h-[90px] sm:h-[110px] lg:h-[120px] mx-3 sm:mx-4 lg:mx-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center p-4 sm:p-5 lg:p-6 group"
               >
                 <img
                   src={partner.logo}
@@ -85,7 +85,7 @@ export function Swiper() {
                     const target = e.target as HTMLImageElement;
                     target.style.display = "none";
                     if (target.parentElement) {
-                      target.parentElement.innerHTML = `<div class="text-[#0A1F44] font-bold text-lg text-center">${partner.name}</div>`;
+                      target.parentElement.innerHTML = `<div class="text-[#0A1F44] font-bold text-sm sm:text-base lg:text-lg text-center">${partner.name}</div>`;
                     }
                   }}
                 />
@@ -96,7 +96,7 @@ export function Swiper() {
       </div>
 
       {/* CSS Animation */}
-      <style jsx>{`
+      <style>{`
         @keyframes scroll {
           0% {
             transform: translateX(0);

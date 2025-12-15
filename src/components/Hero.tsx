@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Lightning, BuildingsIcon, BroadcastIcon, GearIcon, WrenchIcon } from '@phosphor-icons/react'
+import { ArrowRight, Lightning, Buildings, Broadcast, Gear, Wrench } from '@phosphor-icons/react'
 import founderImage from '@/assets/founder.png'
 
 export function Hero() {
@@ -178,7 +178,7 @@ Founder | Chairman
                 <div className="group p-4 rounded-xl bg-[#03045e] hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <div className="flex flex-col items-center gap-2 text-center">
                   <div className="flex items-center justify-center transition-transform rounded-lg w-11 h-11 bg-white/10 group-hover:scale-110">
-                    <BuildingsIcon size={22} className="text-white" weight="duotone" />
+                    <Buildings size={22} className="text-white" weight="duotone" />
                   </div>
                   <span className="text-sm font-semibold text-white">EHV Substations</span>
                   <span className="text-xs text-white/70">66kV - 400kV</span>
@@ -187,7 +187,7 @@ Founder | Chairman
                 <div className="group p-4 rounded-xl bg-[#03045e]  hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <div className="flex flex-col items-center gap-2 text-center">
                   <div className="flex items-center justify-center transition-transform rounded-lg w-11 h-11 bg-white/10 group-hover:scale-110">
-                    <BroadcastIcon size={22} className="text-white" weight="duotone" />
+                    <Broadcast size={22} className="text-white" weight="duotone" />
                   </div>
                     <span className="text-sm font-semibold text-white">T&D Lines</span>
                     <span className="text-xs text-white/70">Up to 400kV</span>
@@ -196,7 +196,7 @@ Founder | Chairman
                 <div className="group p-4 rounded-xl  bg-[#03045e]  hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <div className="flex flex-col items-center gap-2 text-center">
                   <div className="flex items-center justify-center transition-transform rounded-lg w-11 h-11 bg-white/10 group-hover:scale-110">
-                    <GearIcon size={22} className="text-white" weight="duotone" />
+                    <Gear size={22} className="text-white" weight="duotone" />
                   </div>
                   <span className="text-sm font-semibold text-white">T&C Services</span>
                   <span className="text-xs text-white/70">Complete Testing</span>
@@ -205,7 +205,7 @@ Founder | Chairman
                 <div className="group p-4 rounded-xl bg-[#03045e]  hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <div className="flex flex-col items-center gap-2 text-center">
                   <div className="flex items-center justify-center transition-transform rounded-lg w-11 h-11 bg-white/10 group-hover:scale-110">
-                    <WrenchIcon size={22} className="text-white" weight="duotone" />
+                    <Wrench size={22} className="text-white" weight="duotone" />
                   </div>
                   <span className="text-sm font-semibold text-white">O&M Support</span>
                   <span className="text-xs text-white/70">24/7 Available</span>
