@@ -1,5 +1,5 @@
 import { Separator } from '@/components/ui/separator'
-import { MapPin, Phone, Envelope } from '@phosphor-icons/react'
+import { MapPin, Phone, Envelope, LinkedinLogo } from '@phosphor-icons/react'
 import Logo from '@/assets/logo22.png'
 
 export function Footer() {
@@ -42,17 +42,30 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <div className='flex flex-col items-center justify-center'>
                 <img
-  src={Logo}
-  alt="Logo"
-  className="w-auto h-16 sm:h-20 lg:h-24 xl:h-32 object-contain"
-/>
+                  src={Logo}
+                  alt="Logo"
+                  className="w-auto h-16 sm:h-20 lg:h-24 xl:h-32 object-contain"
+                />
               </div>
             </div>
              
             <p className="mb-4 text-xs sm:text-sm leading-relaxed text-white/70">
               Trusted EHV substation and transmission line contractor. TNEB Class I certified. 
-              Founded by <strong className="text-white">Late  S. Ayyappan</strong>
+              Founded by <strong className="text-white">Late S. Ayyappan</strong>
             </p>
+
+            {/* LinkedIn Link */}
+            <div className="flex items-center gap-3 mt-4">
+              <a 
+                href="https://www.linkedin.com/company/ayyappan-co" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
+              >
+                <LinkedinLogo size={20} weight="fill" />
+                <span>Follow us on LinkedIn</span>
+              </a>
+            </div>
           </div>
 
           {/* Company Links */}
@@ -117,7 +130,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Envelope size={18} weight="duotone" className="flex-shrink-0 text-white" />
-                <a href="mailto:info@ayyappanco.com " className="break-all transition-colors text-white/80 hover:text-white">
+                <a href="mailto:info@ayyappanco.com" className="break-all transition-colors text-white/80 hover:text-white">
                   info@ayyappanco.com 
                 </a>
               </div>
@@ -153,9 +166,10 @@ export function Footer() {
               <div>
                 <h5 className="mb-1 text-sm font-semibold text-white">Saudi Arabia Office</h5>
                 <p className="text-sm leading-relaxed text-white/80">
-                 Venus Energy, Noor Plaza  <br />
-(3rd Floor), 2770 Custodian of  <br />Two Holy Mosques Rd,  <br />
-Al Khobar 34448,  Saudi Arabia
+                 Venus Energy, Noor Plaza<br />
+                 (3rd Floor), 2770 Custodian of<br />
+                 Two Holy Mosques Rd,<br />
+                 Al Khobar 34448, Saudi Arabia
                 </p>
               </div>
             </div>

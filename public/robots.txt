@@ -1,46 +1,145 @@
-# robots.txt for masspowerinfra.com
-# Ayyappan & Co - Power Infrastructure Experts Since 2009
+# robots.txt for ayyappanco.com
+# Power Infrastructure Experts - EHV Substations & Transmission Lines
 
+# Allow all legitimate search engines
 User-agent: *
 Allow: /
 
-# Disallow access to admin areas (if any)
+# Disallow admin, API, and system areas
 Disallow: /admin/
-Disallow: /wp-admin/
-Disallow: /wp-login.php
-
-# Disallow access to internal files and directories
-Disallow: /cgi-bin/
-Disallow: /tmp/
+Disallow: /api/
 Disallow: /private/
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /test/
+Disallow: /temp/
+Disallow: /dist/
+Disallow: /build/
 
-# Allow search engines to access CSS, JS, and images
+# Allow important directories for SEO
+Allow: /about
+Allow: /services/
+Allow: /projects
+Allow: /certifications
+Allow: /contact
+Allow: /locations/
+Allow: /privacy-policy
+Allow: /terms
+
+# Allow static assets for proper page rendering
+Allow: /assets/
 Allow: /*.css$
 Allow: /*.js$
+Allow: /*.jsx$
+Allow: /*.tsx$
+Allow: /main.css
+Allow: /main.tsx
+
+# Allow all images for Google Image Search
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.png$
 Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.webp$
+Allow: /*.ico$
+Allow: /logo.png
+Allow: /logo2.png
+
+# Allow fonts
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
 
 # Sitemap location
-Sitemap: https://masspowerinfra.com/sitemap.xml
+Sitemap: https://ayyappanco.com/sitemap.xml
 
-# Crawl-delay (optional - adjust if needed)
-# Crawl-delay: 1
+# Specific rules for major search engines
 
-# Specific rules for Google
+# Google (all variants)
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
-# Specific rules for Bing
-User-agent: Bingbot
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/
+
+User-agent: Googlebot-Mobile
 Allow: /
 
-# Block bad bots (optional)
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yahoo/Slurp
+User-agent: Slurp
+Allow: /
+
+# Baidu (Chinese search engine)
+User-agent: Baiduspider
+Allow: /
+
+# Yandex (Russian search engine)
+User-agent: Yandex
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Apple's Applebot
+User-agent: Applebot
+Allow: /
+
+# Rate limit aggressive crawlers
 User-agent: AhrefsBot
 Crawl-delay: 10
+Disallow: /
 
 User-agent: SemrushBot
 Crawl-delay: 10
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Crawl-delay: 5
+
+# Block malicious bots
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+# Social Media Crawlers (allow)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# End of robots.txt
+# Contact: info@ayyappanco.com
+# Website: https://ayyappanco.com
