@@ -1,18 +1,29 @@
-import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { componentTagger } from "lovable-tagger";
+import { defineConfig, PluginOption } from "vite";
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+import sparkPlugin from "@github/spark/spark-vite-plugin";
+import createIconImportProxy from "@github/spark/vitePhosphorIconProxyPlugin";
+import { resolve } from 'path'
+
+const projectRoot = process.env.PROJECT_ROOT || import.meta.dirname
+
+// https://vite.dev/config/
+export default defineConfig({
   server: {
-    host: "::",
-    port: 8080,
+    port: 8000,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+
+    react(),
+    tailwindcss(),
+    // DO NOT REMOVE
+    createIconImportProxy() as PluginOption,
+    sparkPlugin() as PluginOption,
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+      '@': resolve(projectRoot, 'src')
+    }
   },
-}));
+});

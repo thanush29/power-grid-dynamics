@@ -1,39 +1,53 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Gallery from "./pages/Gallery";
-import Team from "./pages/Team";
-import Career from "./pages/Career";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import { Toaster } from 'sonner'
+import { Header } from '@/components/Header'
+import { Hero } from '@/components/Hero'
+import { About } from '@/components/About'
+import { WhyChooseUs } from '@/components/WhyChooseUs'
+import { Products } from '@/components/Products'
+import { TechnologyShowcase } from '@/components/TechnologyShowcase'
+import { Specifications } from '@/components/Specifications'
+import { Certifications } from '@/components/Certifications'
+import { Gallery } from '@/components/Gallery'
+import { Clients } from '@/components/Clients'
+import { Services } from '@/components/Services'
+import { Team } from '@/components/Team'
+import { FeaturedProject } from '@/components/FeaturedProject'
+import { DetailedServices } from '@/components/DetailedServices'
+import { CompanyValues } from '@/components/CompanyValues'
+import {Swiper} from '@/components/Swiper'
+import { Testimonials } from '@/components/Testimonials'
 
-const queryClient = new QueryClient();
+import { Contact } from '@/components/Contact'
+import { Footer } from '@/components/Footer'
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:id" element={<Services />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <div className="relative min-h-screen bg-[#90e0ef]/50 smooth-scroll">
+      <Toaster position="top-right" richColors />
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <WhyChooseUs />
+        <Products />
+        <TechnologyShowcase />
+        <Specifications />
+        <Certifications />
+        <Gallery />
+        <CompanyValues />
+        <Clients />
+        <Services />
+        <FeaturedProject />
+        <DetailedServices />
+        <Team />
+        <Swiper />
+        <Testimonials />
 
-export default App;
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default App
