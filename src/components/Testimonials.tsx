@@ -78,9 +78,9 @@ export function Testimonials() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-[#F0F9FF] overflow-hidden">
+    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 bg-[#F0F9FF] overflow-hidden">
       <div className="px-4 mx-auto max-w-[1440px] sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
+        <div className="mb-8 sm:mb-12 lg:mb-16 text-center">
          
 
            <span className="inline-block px-5 py-2 bg-[#03045e] text-white font-semibold rounded-full text-sm mb-6">
@@ -101,31 +101,29 @@ export function Testimonials() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((item, idx) => (
-            <Card key={idx} className="testimonial-card p-4 hover:shadow-xl transition-shadow border-[#BFDBFE] bg-white/70 group">
-              <Quotes size={48} weight="duotone" className="text-[#BFDBFE] mb-6 group-hover:text-[#93C5FD] transition-colors" />
+            <Card key={idx} className="testimonial-card p-3 sm:p-4 hover:shadow-xl transition-shadow border-[#BFDBFE] bg-white/70 group">
+              <Quotes size={32} weight="duotone" className="text-[#BFDBFE] mb-3 sm:mb-4 lg:mb-6 group-hover:text-[#93C5FD] transition-colors sm:w-10 sm:h-10 lg:w-12 lg:h-12" />
               
-              <p className="text-[#154D71] leading-relaxed mb-6 italic text-sm sm:text-base">
+              <p className="text-[#154D71] leading-relaxed mb-4 sm:mb-5 lg:mb-6 italic text-xs sm:text-sm">
                 "{item.text}"
               </p>
 
-              
-
-              <div className="flex items-center gap-4 pt-4 border-t border-[#E0F2FE]">
+              <div className="flex items-center gap-3 sm:gap-4 pt-3 sm:pt-4 border-t border-[#E0F2FE]">
                 <img 
                   src={item.image} 
                   alt={item.company}
-                  className="object-cover w-10 h-10 rounded-full"
+                  className="object-cover w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0"
                 />
-                <div>
-                  <div className="font-bold text-[#154D71] text-sm">{item.author}</div>
-                  <div className="text-[#1E3A5A] text-xs">{item.location}</div>
-                  <div className="flex items-center gap-1 ">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} weight="fill" className="text-[#03045e]" />
-                ))}
-              </div>
+                <div className="min-w-0">
+                  <div className="font-bold text-[#154D71] text-xs sm:text-sm truncate">{item.author}</div>
+                  <div className="text-[#1E3A5A] text-[10px] sm:text-xs">{item.location}</div>
+                  <div className="flex items-center gap-0.5 sm:gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={12} weight="fill" className="text-[#03045e] sm:w-4 sm:h-4" />
+                    ))}
+                  </div>
                 </div>
               </div>
             </Card>

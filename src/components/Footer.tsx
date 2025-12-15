@@ -34,24 +34,22 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-[#03045e] text-white py-12">
+    <footer className="bg-[#03045e] text-white py-8 sm:py-10 lg:py-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:gap-8 mb-6 sm:mb-8 grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-4">
-                          <div className='flex flex-col items-center justify-center'>
-                            <img
+              <div className='flex flex-col items-center justify-center'>
+                <img
   src={Logo}
   alt="Logo"
-  className="w-auto h-24 sm:h-28 lg:h-32 object-contain"
+  className="w-auto h-16 sm:h-20 lg:h-24 xl:h-32 object-contain"
 />
-
-            
-                          </div>
-                        </div>
+              </div>
+            </div>
              
-            <p className="mb-4 text-sm leading-relaxed text-white/70">
+            <p className="mb-4 text-xs sm:text-sm leading-relaxed text-white/70">
               Trusted EHV substation and transmission line contractor. TNEB Class I certified. 
               Founded by <strong className="text-white">Late  S. Ayyappan</strong>
             </p>
@@ -59,13 +57,13 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="mb-4 font-semibold text-white">Company</h4>
-            <ul className="space-y-2">
+            <h4 className="mb-3 sm:mb-4 font-semibold text-white text-sm sm:text-base">Company</h4>
+            <ul className="space-y-1.5 sm:space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-sm transition-colors text-white/60 hover:text-white"
+                    className="text-xs sm:text-sm transition-colors text-white/60 hover:text-white"
                   >
                     {link.label}
                   </button>
@@ -76,13 +74,13 @@ export function Footer() {
 
           {/* Capabilities */}
           <div>
-            <h4 className="mb-4 font-semibold text-white">Capabilities</h4>
-            <ul className="space-y-2">
+            <h4 className="mb-3 sm:mb-4 font-semibold text-white text-sm sm:text-base">Capabilities</h4>
+            <ul className="space-y-1.5 sm:space-y-2">
               {footerLinks.capabilities.map((link) => (
                 <li key={link.label}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-sm transition-colors text-white/60 hover:text-white"
+                    className="text-xs sm:text-sm transition-colors text-white/60 hover:text-white"
                   >
                     {link.label}
                   </button>
@@ -93,12 +91,12 @@ export function Footer() {
 
           {/* Certifications */}
           <div>
-            <h4 className="mb-4 font-semibold text-white">Certifications</h4>
-            <ul className="space-y-2">
-              <li className="text-sm text-white/60">TNEB Class I Contractor</li>
-              <li className="text-sm text-white/60">ESA Grade License (ESA:530)</li>
-              <li className="text-sm text-white/60">PWD High Ways Class A&B</li>
-              <li className="text-sm text-white/60">ISO 9001:2015 Certified</li>
+            <h4 className="mb-3 sm:mb-4 font-semibold text-white text-sm sm:text-base">Certifications</h4>
+            <ul className="space-y-1.5 sm:space-y-2">
+              <li className="text-xs sm:text-sm text-white/60">TNEB Class I Contractor</li>
+              <li className="text-xs sm:text-sm text-white/60">ESA Grade License (ESA:530)</li>
+              <li className="text-xs sm:text-sm text-white/60">PWD High Ways Class A&B</li>
+              <li className="text-xs sm:text-sm text-white/60">ISO 9001:2015 Certified</li>
             </ul>
           </div>
         </div>

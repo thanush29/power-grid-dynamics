@@ -252,9 +252,9 @@ export function Gallery() {
   }
 
   return (
-    <section id="gallery" className="py-20 lg:py-28 bg-[#F8FAFC]/60 relative">
+    <section id="gallery" className="py-12 sm:py-16 lg:py-20 bg-[#F8FAFC]/60 relative">
       <div className="px-4 mx-auto max-w-[1440px] sm:px-6 lg:px-8">
-        <div ref={titleRef} className="mb-12 text-center">
+        <div ref={titleRef} className="mb-8 sm:mb-10 lg:mb-12 text-center">
           <span className="inline-block px-4 py-2 bg-[#03045e] text-white font-bold rounded-full text-sm mb-4 shadow-lg shadow-[#33A1E0]/25">
             Project Gallery
           </span>
@@ -273,14 +273,14 @@ export function Gallery() {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="flex justify-center gap-4 mb-10 bg-transparent">
+          <TabsList className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-10 bg-transparent">
             <button 
               onClick={() => setActiveTab('civil')}
               style={{
                 backgroundColor: activeTab === 'civil' ? '#03045e' : '#ffffff',
                 color: activeTab === 'civil' ? '#ffffff' : '#154D71',
               }}
-              className="px-6 py-3 text-sm font-semibold transition-all rounded-full shadow-md"
+              className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold transition-all rounded-full shadow-md"
             >
               Substation Civil Works
             </button>
@@ -290,14 +290,14 @@ export function Gallery() {
                 backgroundColor: activeTab === 'pile' ? '#154D71' : '#ffffff',
                 color: activeTab === 'pile' ? '#ffffff' : '#154D71',
               }}
-              className="px-6 py-3 text-sm font-semibold transition-all rounded-full shadow-md"
+              className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold transition-all rounded-full shadow-md"
             >
               Pile Foundation
             </button>
           </TabsList>
 
           <TabsContent value="civil" forceMount className="data-[state=inactive]:hidden">
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-6">
               {substationProjects.map((item, index) => (
                 <GalleryCard key={item.id} item={item} index={index} />
               ))}
@@ -305,7 +305,7 @@ export function Gallery() {
           </TabsContent>
 
           <TabsContent value="pile" forceMount className="data-[state=inactive]:hidden">
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-6">
               {transmissionProjects.map((item, index) => (
                 <GalleryCard key={item.id} item={item} index={index} />
               ))}

@@ -115,7 +115,7 @@ export function Products() {
     return (
       <div ref={cardRef}>
         <Card className="overflow-hidden transition-all duration-500 border-0 shadow-lg hover:shadow-2xl group bg-white/70 hover:-translate-y-2">
-          <div className="relative overflow-hidden h-44">
+          <div className="relative overflow-hidden h-36 sm:h-40 lg:h-44">
             <img
               src={product.image}
               alt={product.name}
@@ -123,19 +123,19 @@ export function Products() {
               loading="lazy"
             />
             <div className={`absolute inset-0 ${product.color} opacity-80`}></div>
-            <div className="absolute top-0 right-0 w-32 h-32 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-5">
-              <h3 className="text-xl font-bold text-white drop-shadow-lg">{product.name}</h3>
+            <div className="absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 lg:p-5">
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white drop-shadow-lg">{product.name}</h3>
             </div>
           </div>
-          <div className="p-5">
-            <p className="text-[#64748B] mb-4 leading-relaxed text-sm">{product.description}</p>
-            <div className="space-y-2">
-              <h4 className="text-sm font-semibold text-[#03045e] mb-2">Key Features:</h4>
+          <div className="p-3 sm:p-4 lg:p-5">
+            <p className="text-[#64748B] mb-3 sm:mb-4 leading-relaxed text-xs sm:text-sm">{product.description}</p>
+            <div className="space-y-1.5 sm:space-y-2">
+              <h4 className="text-xs sm:text-sm font-semibold text-[#03045e] mb-1.5 sm:mb-2">Key Features:</h4>
               {product.specs.map((spec, idx) => (
-                <div key={spec} className="flex items-center gap-2">
-                  <div className={`w-1.5 h-1.5 rounded-full ${product.color} flex-shrink-0`}></div>
-                  <span className="text-sm text-[#03045e]">{spec}</span>
+                <div key={spec} className="flex items-center gap-1.5 sm:gap-2">
+                  <div className={`w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full ${product.color} flex-shrink-0`}></div>
+                  <span className="text-xs sm:text-sm text-[#03045e]">{spec}</span>
                 </div>
               ))}
             </div>
@@ -169,11 +169,11 @@ export function Products() {
         </div>
 
         <Tabs defaultValue="substations" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 bg-[#03045e]/10 p-1.5 rounded-xl h-14">
-            <TabsTrigger value="substations" className="text-base font-semibold text-white data-[state=active]:bg-[#03045e] data-[state=active]:border-[#03045e] data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:border-2 rounded-lg transition-all">
+          <TabsList className="grid w-full max-w-xs sm:max-w-md mx-auto grid-cols-2 mb-6 sm:mb-8 lg:mb-10 bg-[#03045e]/10 p-1 sm:p-1.5 rounded-xl h-11 sm:h-14">
+            <TabsTrigger value="substations" className="text-xs sm:text-sm lg:text-base font-semibold text-white data-[state=active]:bg-[#03045e] data-[state=active]:border-[#03045e] data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:border-2 rounded-lg transition-all">
               EHV Substations
             </TabsTrigger>
-            <TabsTrigger value="transmission" className="text-base font-semibold text-white data-[state=active]:bg-[#33A1E0] py-2 data-[state=active]:border-[#03045e] data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:border rounded-lg transition-all"
+            <TabsTrigger value="transmission" className="text-xs sm:text-sm lg:text-base font-semibold text-white data-[state=active]:bg-[#33A1E0] py-2 data-[state=active]:border-[#03045e] data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:border rounded-lg transition-all"
             >
               Transmission Lines
             </TabsTrigger>
@@ -196,46 +196,46 @@ export function Products() {
           </TabsContent>
         </Tabs>
 
-        <div className="mt-10 bg-[#03045e] rounded-2xl p-6 lg:p-8 relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#03045e]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#03045e]/10 rounded-full blur-3xl"></div>
-          <div className="relative z-10 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-6 sm:mt-8 lg:mt-10 bg-[#03045e] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-[#03045e]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-36 sm:w-48 h-36 sm:h-48 bg-[#03045e]/10 rounded-full blur-3xl"></div>
+          <div className="relative z-10 grid items-center gap-4 sm:gap-6 lg:gap-8 md:grid-cols-2">
             <div>
-              <h3 className="mb-4 text-2xl font-bold text-white">Turnkey Solutions</h3>
-              <p className="mb-6 leading-relaxed text-white/70">
+              <h3 className="mb-3 sm:mb-4 text-lg sm:text-xl lg:text-2xl font-bold text-white">Turnkey Solutions</h3>
+              <p className="mb-4 sm:mb-6 leading-relaxed text-xs sm:text-sm lg:text-base text-white/70">
                 We offer complete Design, Engineering, Procurement, Construction, Testing & Commissioning, 
                 and Operation & Maintenance services. Our integrated approach ensures seamless project 
                 execution from planning to handover, backed by our 30 years of proven expertise.
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 lg:gap-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#03045e]"></div>
-                  <span className="text-sm font-medium text-white/90">Single-point responsibility</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#03045e] flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm font-medium text-white/90">Single-point responsibility</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#10B981]"></div>
-                  <span className="text-sm font-medium text-white/90">Budget adherence</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#10B981] flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm font-medium text-white/90">Budget adherence</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#03045e]"></div>
-                  <span className="text-sm font-medium text-white/90">Quality assurance</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#03045e] flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm font-medium text-white/90">Quality assurance</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#03045e]"></div>
-                  <span className="text-sm font-medium text-white/90">Timely delivery</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#03045e] flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm font-medium text-white/90">Timely delivery</span>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="relative overflow-hidden shadow-2xl rounded-xl ring-4 ring-white/10">
+              <div className="relative overflow-hidden shadow-2xl rounded-lg sm:rounded-xl ring-2 sm:ring-4 ring-white/10">
                 <img
                   src={workersImage}
                   alt="Power infrastructure project"
-                  className="object-cover w-full h-64"
+                  className="object-cover w-full h-48 sm:h-56 lg:h-64"
                 />
                 <div className="absolute inset-0 bg-[#03045e]/70"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-lg font-semibold text-white">Delivering Power. Powering Progress.</p>
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 lg:p-6">
+                  <p className="text-sm sm:text-base lg:text-lg font-semibold text-white">Delivering Power. Powering Progress.</p>
                 </div>
               </div>
             </div>
