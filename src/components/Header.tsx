@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { List as ListIcon, X as XIcon, Phone as PhoneIcon } from '@phosphor-icons/react'
+import { List as ListIcon, X as XIcon, Phone as PhoneIcon, Download as DownloadIcon } from '@phosphor-icons/react'
 import Logo from '@/assets/logo2.png'
 
 export function Header() {
@@ -21,6 +21,16 @@ export function Header() {
       element.scrollIntoView({ behavior: 'smooth' })
       setIsMobileMenuOpen(false)
     }
+  }
+
+  const handleDownloadBrochure = () => {
+    const link = document.createElement('a')
+    link.href = '/ayyppan-co-brochure.pdf'
+    link.download = 'ayyppan-co-brochure.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    setIsMobileMenuOpen(false)
   }
 
   const navItems = [
@@ -44,11 +54,10 @@ export function Header() {
             <div className="flex items-center gap-2 sm:gap-4">
               <div className='flex flex-col items-center justify-center'>
                 <img
-  src={Logo}
-  alt="Logo"
-  className="w-auto h-12 sm:h-16 md:h-20 lg:h-28 object-contain"
-/>
-
+                  src={Logo}
+                  alt="Logo"
+                  className="w-auto h-12 sm:h-16 md:h-20 lg:h-28 object-contain"
+                />
               </div>
             </div>
 
@@ -71,7 +80,16 @@ export function Header() {
               </a>
               <Button
                 size="sm"
-                className="bg-[#03045e] hover:bg-[#03045e] text-white bordder-[#154D71] border font-semibold h-9 px-4"
+                variant="outline"
+                className="border-[#154D71] text-[#154D71] hover:bg-[#E0F2FE] font-semibold h-9 px-4 flex items-center gap-2"
+                onClick={handleDownloadBrochure}
+              >
+                <DownloadIcon size={16} weight="bold" />
+                Brochure
+              </Button>
+              <Button
+                size="sm"
+                className="bg-[#03045e] hover:bg-[#03045e] text-white border-[#154D71] border font-semibold h-9 px-4"
                 onClick={() => scrollToSection('contact')}
               >
                 Contact Us
@@ -105,12 +123,19 @@ export function Header() {
                 {item.label}
               </button>
             ))}
-            <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-[#BFDBFE]">
+            <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-[#BFDBFE] space-y-2">
               <Button
-                className="w-full bg-[#06d6a0] hover:bg-[#06d6a0] text-white font-semibold text-sm sm:text-base"
+                className="w-full bg-white border-2 border-[#154D71] text-[#154D71] hover:bg-[#E0F2FE] font-semibold text-sm sm:text-base flex items-center justify-center gap-2"
+                onClick={handleDownloadBrochure}
+              >
+                <DownloadIcon size={18} weight="bold" />
+                Download Brochure
+              </Button>
+              <Button
+                className="w-full bg-[#03045e] hover:bg-[#03045e] text-white font-semibold text-sm sm:text-base"
                 onClick={() => scrollToSection('contact')}
               >
-                Get Quote
+                Contact Us
               </Button>
             </div>
           </nav>
@@ -119,4 +144,3 @@ export function Header() {
     </>
   )
 }
-
