@@ -128,7 +128,7 @@ export function Hero() {
               {/* Stats */}
               <div ref={statsRef} className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-[#E2E8F0]">
                 <div className="space-y-1">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#03045e] ">14+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#03045e] ">30+</div>
                   <div className="text-xs sm:text-sm text-[#64748B]">Years of EPC Excellence</div>
                 </div>
                 <div className="space-y-1">
@@ -136,7 +136,7 @@ export function Hero() {
                   <div className="text-xs sm:text-sm text-[#64748B]">km Lines Executed</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#03045e] ">150+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#03045e] ">100+</div>
                   <div className="text-xs sm:text-sm text-[#64748B]">Substations Commissioned</div>
                 </div>
                 <div className="space-y-1">
