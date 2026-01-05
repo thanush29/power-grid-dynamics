@@ -7,7 +7,6 @@ import Lt from '@/assets/testimonial/lt.jpg'
 import Kec from '@/assets/testimonial/kec.jpg'
 import Sterlite from '@/assets/testimonial/sterlite.jpg'
 import Tneb from '@/assets/testimonial/tneb.jpg'
-import Green from '@/assets/testimonial/green.png'
 import Highway from '@/assets/testimonial/highway.webp'
 
 gsap.registerPlugin(ScrollTrigger)

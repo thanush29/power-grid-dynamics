@@ -16,6 +16,7 @@ export function Clients() {
     { name: 'Highways Depart, TN', icon: Gear, color: 'bg-[#03045e]' },
     { name: 'L&T Construction', icon: Factory, color: 'bg-[#03045e]' },
     { name: 'Shah Power Pvt. Ltd', icon: Factory, color: 'bg-[#03045e]' },
+    { name: 'JSW', icon: Lightning, color: 'bg-[#03045e]' },
     { name: 'BHEL', icon: Factory, color: 'bg-[#03045e]' },
     { name: 'Sterlite Power', icon: Lightning, color: 'bg-[#03045e]' },
   ]
@@ -120,7 +121,7 @@ export function Clients() {
             <div className="text-sm text-[#03045e] font-medium">Peak Revenue</div>
           </div>
           <div className="p-6 text-center shadow-md bg-white/80 rounded-2xl">
-            <div className="text-3xl sm:text-4xl font-bold text-[#03045e] mb-2">9+ Years</div>
+            <div className="text-3xl sm:text-4xl font-bold text-[#03045e] mb-2">30+ Years</div>
             <div className="text-sm text-[#03045e] font-medium">Track Record</div>
           </div>
         </div>

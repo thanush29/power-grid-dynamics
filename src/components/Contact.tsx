@@ -129,8 +129,9 @@ export function Contact() {
     })
   }
 
-  const contactInfo = [
+ const contactInfo = [
     {
+      
       icon: MapPin,
       title: 'Head Office',
       details: [
@@ -140,6 +141,17 @@ export function Contact() {
       ],
       color: 'bg-[#03045e]',
     },
+    {
+      icon: MapPin,
+      title: 'Chennai Branch Office',
+      details: [
+        'Old No.45, New No.95,',
+        'Poes Main Road, Teynampet,',
+        'Chennai - 600018',
+      ],
+      color: 'bg-[#03045e]',
+    },
+    
     {
       icon: Phone,
       title: 'Call Us',
@@ -247,7 +259,7 @@ export function Contact() {
                     id="message"
                     name="message"
                     placeholder="Tell us about your requirements..."
-                    rows={4}
+                    rows={13}
                     value={formData.message}
                     onChange={handleChange}
                     required

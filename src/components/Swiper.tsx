@@ -1,17 +1,14 @@
 // src/components/Swiper.tsx
 import { useRef } from "react";
-import meilLogo from "@/assets/swiper/meil.png";
-import mahabalaLogo from "@/assets/swiper/Mahabala.png";
 import tnebLogo from "@/assets/swiper/tneb (1).jpg";
 import ptlLogo from "@/assets/swiper/PTL.png";
 import shahLogo from "@/assets/swiper/Shah.png";
-import greenLogo from "@/assets/swiper/Green.png";
-import admireLogo from "@/assets/swiper/admire.png";
 import bhelLogo from "@/assets/swiper/bhel.png";
 import Sterlite from "@/assets/swiper/Sterlite.png";
 import ltLogo from "@/assets/swiper/lt.jpg";
 import nlcLogo from "@/assets/swiper/NLC.png";
 import venusLogo from "@/assets/swiper/venusenergy.png";
+import Jsw from "@/assets/swiper/JSW.png";
 
 export function Swiper() {
   const partners = [
@@ -23,6 +20,7 @@ export function Swiper() {
     { name: "LT", logo: ltLogo },
     { name: "NLC", logo: nlcLogo },
     { name: "Venus Energy", logo: venusLogo },
+    { name: "JSW", logo: Jsw },
   ];
 
   return (

@@ -142,8 +142,9 @@ export function Footer() {
               <div>
                 <h5 className="mb-1 text-sm font-semibold text-white">Head Office</h5>
                 <p className="text-sm leading-relaxed text-white/80">
-                  No:5/107-D1, Meenakshi Nagar,<br />
-                  A.Salaipudur, Kovilpatti - 628502
+                  No:5/255-G, E.B Colony, 
+A. Salaipudur, Kovilpatti, <br />Tuticorin - 628 502, 
+Tamilnadu
                 </p>
               </div>
             </div>
